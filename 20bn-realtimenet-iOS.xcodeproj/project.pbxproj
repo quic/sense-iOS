@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0C7EF452541F49A008A066F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF442541F49A008A066F /* AppDelegate.swift */; };
+		A0C7EF492541F49A008A066F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF482541F49A008A066F /* ViewController.swift */; };
+		A0C7EF4C2541F49A008A066F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EF4A2541F49A008A066F /* Main.storyboard */; };
+		A0C7EF4E2541F49E008A066F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EF4D2541F49E008A066F /* Assets.xcassets */; };
+		A0C7EF512541F49E008A066F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EF4F2541F49E008A066F /* LaunchScreen.storyboard */; };
+		A0C7EF7E2541F5DD008A066F /* CameraTurnedOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF7D2541F5DD008A066F /* CameraTurnedOffViewController.swift */; };
+		A0C7EF832541F606008A066F /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF822541F606008A066F /* WorkoutModel.swift */; };
+		A0C7EF882541F615008A066F /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF872541F615008A066F /* MotionManager.swift */; };
+		A0C7EF902541F70C008A066F /* InferenceLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */; };
+		A0C7EF972541F71D008A066F /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF952541F71D008A066F /* CVPixelBuffer+Helpers.swift */; };
+		A0C7EF982541F71D008A066F /* FrameExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF962541F71D008A066F /* FrameExtraction.swift */; };
+		A0C7EF9D2541F944008A066F /* realtimenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */; };
+		A0C7EFA22541FB8A008A066F /* realtimenet_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EFA12541FB89008A066F /* realtimenet_labels.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0C7EF582541F49F008A066F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0C7EF392541F49A008A066F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0C7EF402541F49A008A066F;
+			remoteInfo = "20bn-realtimenet-iOS";
+		};
+		A0C7EF632541F49F008A066F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0C7EF392541F49A008A066F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0C7EF402541F49A008A066F;
+			remoteInfo = "20bn-realtimenet-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A0C7EF412541F49A008A066F /* 20bn-realtimenet-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20bn-realtimenet-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C7EF442541F49A008A066F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0C7EF482541F49A008A066F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0C7EF4B2541F49A008A066F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0C7EF4D2541F49E008A066F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0C7EF502541F49E008A066F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0C7EF522541F49E008A066F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C7EF572541F49F008A066F /* 20bn-realtimenet-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20bn-realtimenet-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C7EF622541F49F008A066F /* 20bn-realtimenet-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20bn-realtimenet-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C7EF7D2541F5DD008A066F /* CameraTurnedOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTurnedOffViewController.swift; sourceTree = "<group>"; };
+		A0C7EF822541F606008A066F /* WorkoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		A0C7EF872541F615008A066F /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceLocal.swift; sourceTree = "<group>"; };
+		A0C7EF952541F71D008A066F /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
+		A0C7EF962541F71D008A066F /* FrameExtraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtraction.swift; sourceTree = "<group>"; };
+		A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realtimenet.mlmodel; sourceTree = "<group>"; };
+		A0C7EFA12541FB89008A066F /* realtimenet_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = realtimenet_labels.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0C7EF3E2541F49A008A066F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C7EF542541F49E008A066F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C7EF5F2541F49F008A066F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0C7EF382541F49A008A066F = {
+			isa = PBXGroup;
+			children = (
+				A0C7EF432541F49A008A066F /* 20bn-realtimenet-iOS */,
+				A0C7EF422541F49A008A066F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0C7EF422541F49A008A066F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0C7EF412541F49A008A066F /* 20bn-realtimenet-iOS.app */,
+				A0C7EF572541F49F008A066F /* 20bn-realtimenet-iOSTests.xctest */,
+				A0C7EF622541F49F008A066F /* 20bn-realtimenet-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0C7EF432541F49A008A066F /* 20bn-realtimenet-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A0C7EF442541F49A008A066F /* AppDelegate.swift */,
+				A0C7EF482541F49A008A066F /* ViewController.swift */,
+				A0C7EF7D2541F5DD008A066F /* CameraTurnedOffViewController.swift */,
+				A0C7EF822541F606008A066F /* WorkoutModel.swift */,
+				A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */,
+				A0C7EF872541F615008A066F /* MotionManager.swift */,
+				A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */,
+				A0C7EFA12541FB89008A066F /* realtimenet_labels.json */,
+				A0C7EF942541F71D008A066F /* VideoRecorder */,
+				A0C7EF4A2541F49A008A066F /* Main.storyboard */,
+				A0C7EF4D2541F49E008A066F /* Assets.xcassets */,
+				A0C7EF4F2541F49E008A066F /* LaunchScreen.storyboard */,
+				A0C7EF522541F49E008A066F /* Info.plist */,
+			);
+			path = "20bn-realtimenet-iOS";
+			sourceTree = "<group>";
+		};
+		A0C7EF942541F71D008A066F /* VideoRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				A0C7EF952541F71D008A066F /* CVPixelBuffer+Helpers.swift */,
+				A0C7EF962541F71D008A066F /* FrameExtraction.swift */,
+			);
+			path = VideoRecorder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C7EF6B2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOS" */;
+			buildPhases = (
+				A0C7EF3D2541F49A008A066F /* Sources */,
+				A0C7EF3E2541F49A008A066F /* Frameworks */,
+				A0C7EF3F2541F49A008A066F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "20bn-realtimenet-iOS";
+			productName = "20bn-realtimenet-iOS";
+			productReference = A0C7EF412541F49A008A066F /* 20bn-realtimenet-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0C7EF562541F49E008A066F /* 20bn-realtimenet-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C7EF6E2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSTests" */;
+			buildPhases = (
+				A0C7EF532541F49E008A066F /* Sources */,
+				A0C7EF542541F49E008A066F /* Frameworks */,
+				A0C7EF552541F49E008A066F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0C7EF592541F49F008A066F /* PBXTargetDependency */,
+			);
+			name = "20bn-realtimenet-iOSTests";
+			productName = "20bn-realtimenet-iOSTests";
+			productReference = A0C7EF572541F49F008A066F /* 20bn-realtimenet-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A0C7EF612541F49F008A066F /* 20bn-realtimenet-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C7EF712541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSUITests" */;
+			buildPhases = (
+				A0C7EF5E2541F49F008A066F /* Sources */,
+				A0C7EF5F2541F49F008A066F /* Frameworks */,
+				A0C7EF602541F49F008A066F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0C7EF642541F49F008A066F /* PBXTargetDependency */,
+			);
+			name = "20bn-realtimenet-iOSUITests";
+			productName = "20bn-realtimenet-iOSUITests";
+			productReference = A0C7EF622541F49F008A066F /* 20bn-realtimenet-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0C7EF392541F49A008A066F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					A0C7EF402541F49A008A066F = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					A0C7EF562541F49E008A066F = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = A0C7EF402541F49A008A066F;
+					};
+					A0C7EF612541F49F008A066F = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = A0C7EF402541F49A008A066F;
+					};
+				};
+			};
+			buildConfigurationList = A0C7EF3C2541F49A008A066F /* Build configuration list for PBXProject "20bn-realtimenet-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0C7EF382541F49A008A066F;
+			productRefGroup = A0C7EF422541F49A008A066F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */,
+				A0C7EF562541F49E008A066F /* 20bn-realtimenet-iOSTests */,
+				A0C7EF612541F49F008A066F /* 20bn-realtimenet-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0C7EF3F2541F49A008A066F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C7EF512541F49E008A066F /* LaunchScreen.storyboard in Resources */,
+				A0C7EF4E2541F49E008A066F /* Assets.xcassets in Resources */,
+				A0C7EF4C2541F49A008A066F /* Main.storyboard in Resources */,
+				A0C7EFA22541FB8A008A066F /* realtimenet_labels.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C7EF552541F49E008A066F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C7EF602541F49F008A066F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0C7EF3D2541F49A008A066F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C7EF7E2541F5DD008A066F /* CameraTurnedOffViewController.swift in Sources */,
+				A0C7EF972541F71D008A066F /* CVPixelBuffer+Helpers.swift in Sources */,
+				A0C7EF9D2541F944008A066F /* realtimenet.mlmodel in Sources */,
+				A0C7EF882541F615008A066F /* MotionManager.swift in Sources */,
+				A0C7EF832541F606008A066F /* WorkoutModel.swift in Sources */,
+				A0C7EF982541F71D008A066F /* FrameExtraction.swift in Sources */,
+				A0C7EF492541F49A008A066F /* ViewController.swift in Sources */,
+				A0C7EF452541F49A008A066F /* AppDelegate.swift in Sources */,
+				A0C7EF902541F70C008A066F /* InferenceLocal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C7EF532541F49E008A066F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C7EF5E2541F49F008A066F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0C7EF592541F49F008A066F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */;
+			targetProxy = A0C7EF582541F49F008A066F /* PBXContainerItemProxy */;
+		};
+		A0C7EF642541F49F008A066F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */;
+			targetProxy = A0C7EF632541F49F008A066F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A0C7EF4A2541F49A008A066F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0C7EF4B2541F49A008A066F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0C7EF4F2541F49E008A066F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0C7EF502541F49E008A066F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0C7EF692541F49F008A066F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0C7EF6A2541F49F008A066F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0C7EF6C2541F49F008A066F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46U46J8QDH;
+				INFOPLIST_FILE = "20bn-realtimenet-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0C7EF6D2541F49F008A066F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46U46J8QDH;
+				INFOPLIST_FILE = "20bn-realtimenet-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0C7EF6F2541F49F008A066F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46U46J8QDH;
+				INFOPLIST_FILE = "20bn-realtimenet-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20bn-realtimenet-iOS.app/20bn-realtimenet-iOS";
+			};
+			name = Debug;
+		};
+		A0C7EF702541F49F008A066F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46U46J8QDH;
+				INFOPLIST_FILE = "20bn-realtimenet-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20bn-realtimenet-iOS.app/20bn-realtimenet-iOS";
+			};
+			name = Release;
+		};
+		A0C7EF722541F49F008A066F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46U46J8QDH;
+				INFOPLIST_FILE = "20bn-realtimenet-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "20bn-realtimenet-iOS";
+			};
+			name = Debug;
+		};
+		A0C7EF732541F49F008A066F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46U46J8QDH;
+				INFOPLIST_FILE = "20bn-realtimenet-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "20bn-realtimenet-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0C7EF3C2541F49A008A066F /* Build configuration list for PBXProject "20bn-realtimenet-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C7EF692541F49F008A066F /* Debug */,
+				A0C7EF6A2541F49F008A066F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C7EF6B2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C7EF6C2541F49F008A066F /* Debug */,
+				A0C7EF6D2541F49F008A066F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C7EF6E2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C7EF6F2541F49F008A066F /* Debug */,
+				A0C7EF702541F49F008A066F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C7EF712541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C7EF722541F49F008A066F /* Debug */,
+				A0C7EF732541F49F008A066F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0C7EF392541F49A008A066F /* Project object */;
+}
