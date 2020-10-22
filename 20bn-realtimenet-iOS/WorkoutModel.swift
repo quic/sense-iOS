@@ -1,11 +1,3 @@
-//
-//  WorkoutModel.swift
-//  iOS-Millie
-//
-//  Created by Antoine Mercier on 2019-12-23.
-//  Copyright © 2019 TwentyBN. All rights reserved.
-//
-
 import UIKit
 import Vision
 import AVFoundation
@@ -70,7 +62,6 @@ final class WorkoutModel: WorkoutsType {
                     int2lab = Dictionary(uniqueKeysWithValues: lab2int.map({ ($1, $0) }))
                   }
               } catch {
-                   // handle error
               }
         }
     }
@@ -176,7 +167,7 @@ final class WorkoutModel: WorkoutsType {
     }
     
     private func processPrediction(pixelBuffer: CVPixelBuffer) {
-        // Resize the input with Core Image to 128x160.
+        // Resize the input with Core Image to the desired output.
         let srcWidth = CVPixelBufferGetWidth(pixelBuffer)
         let srcHeight = CVPixelBufferGetHeight(pixelBuffer)
         guard let resizedPixelBuffer = resizePixelBuffer(pixelBuffer,
@@ -255,37 +246,9 @@ extension WorkoutModel: MotionManagerDelegate {
 extension WorkoutModel: FrameExtractorDelegate {
     func captured(_ capture: FrameExtractor, didCaptureVideoFrame pixelBuffer: CVPixelBuffer?) {
         if let pixelBuffer = pixelBuffer {
-            // For better throughput, perform the prediction on a background queue
-            // instead of on the VideoCapture queue. You can use a semaphore to block
-            // the capture queue and drop frames when CoreML can't keep up.
             DispatchQueue.global().async {
                 self.processPrediction(pixelBuffer: pixelBuffer)
             }
-        }
-    }
-}
-
-
-extension Array where Element: Comparable {
-    func argmax() -> Index? {
-        return indices.max(by: { self[$0] < self[$1] })
-    }
-    
-    func argmin() -> Index? {
-        return indices.min(by: { self[$0] < self[$1] })
-    }
-}
-
-extension Array {
-    func argmax(by areInIncreasingOrder: (Element, Element) throws -> Bool) rethrows-> Index? {
-        return try indices.max { (i, j) throws -> Bool in
-            try areInIncreasingOrder(self[i], self[j])
-        }
-    }
-    
-    func argmin(by areInIncreasingOrder: (Element, Element) throws -> Bool) rethrows-> Index? {
-        return try indices.min { (i, j) throws -> Bool in
-            try areInIncreasingOrder(self[i], self[j])
         }
     }
 }

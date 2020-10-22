@@ -1,11 +1,3 @@
-//
-//  MotionManager.swift
-//  UnityTest
-//
-//  Created by Rakeeb Hossain on 2019-07-25.
-//  Copyright © 2019 Rakeeb Hossain. All rights reserved.
-//
-
 import UIKit
 
 public protocol MotionManagerDelegate: class {

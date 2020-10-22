@@ -1,11 +1,3 @@
-//
-//  CameraTurnedOffViewController.swift
-//  iOS-Millie
-//
-//  Created by Kushal Pandya on 2019-12-05.
-//  Copyright © 2019 TwentyBN. All rights reserved.
-//
-
 import UIKit
 
 class CameraTurnedOffViewController: UIViewController {
@@ -14,7 +6,7 @@ class CameraTurnedOffViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cameraDescriptionLabel.text = "please allow the caloriemeter access to your camera. Turn on Camera in your device settings."
+        cameraDescriptionLabel.text = "please allow the app access to your camera. Turn on Camera in your device settings."
     }
     
 

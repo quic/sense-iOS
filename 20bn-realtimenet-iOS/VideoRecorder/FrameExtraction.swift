@@ -1,11 +1,3 @@
-//
-//  FrameExtraction.swift
-//  python-ios-integration
-//
-//  Created by Rakeeb Hossain on 2019-06-20.
-//  Copyright © 2019 20bn. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 import CoreVideo
@@ -16,7 +8,6 @@ public protocol FrameExtractorDelegate: class {
 }
 
 public class FrameExtractor: NSObject {
-    public var previewLayer: AVCaptureVideoPreviewLayer?
     weak var delegate: FrameExtractorDelegate?
     public var fps = 16
     public var fps2 = 30
@@ -65,14 +56,6 @@ public class FrameExtractor: NSObject {
         guard captureSession.canAddInput(captureDeviceInput) else { return false }
         captureSession.addInput(captureDeviceInput)
         
-        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-        previewLayer.connection?.videoOrientation = .portrait
-        // previewLayer.connection?.automaticallyAdjustsVideoMirroring = false
-        // previewLayer.connection?.isVideoMirrored = true
-
-        self.previewLayer = previewLayer
-        
         let settings: [String : Any] = [
             kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: kCVPixelFormatType_32BGRA)
         ]
@@ -106,7 +89,6 @@ public class FrameExtractor: NSObject {
     
     public func start() {
         if (!captureSession.isRunning) {
-            
             captureSession.startRunning()
         }
     }
@@ -116,87 +98,6 @@ public class FrameExtractor: NSObject {
             captureSession.stopRunning()
         }
     }
-    
-    private func resizePixelBuffer_Accelerate(imageBuffer: CVPixelBuffer, scaleWidth: Int, scaleHeight: Int) -> CVPixelBuffer? {
-        CVPixelBufferLockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: 0))
-        guard let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer) else {return nil}
-        let bytes_per_row = CVPixelBufferGetBytesPerRow(imageBuffer)
-        let width = CVPixelBufferGetWidth(imageBuffer)
-        let height = CVPixelBufferGetHeight(imageBuffer)
-        
-        // Allocate input buffer
-        var inBuff = vImage_Buffer(data: baseAddress, height: vImagePixelCount(height), width: vImagePixelCount(width), rowBytes: bytes_per_row)
-        defer { free(inBuff.data) }
-        
-        // Allocate output container
-        let outData = UnsafeMutablePointer<UInt8>.allocate(capacity: 4*scaleWidth*scaleHeight)
-        defer { outData.deallocate() }
- 
-        // Assign output buffer
-        var outBuff = vImage_Buffer(data: outData, height: vImagePixelCount(scaleHeight), width: vImagePixelCount(scaleWidth), rowBytes: 4*scaleWidth)
-        defer { free(outBuff.data) }
-        
-        let releaseCallback: CVPixelBufferReleaseBytesCallback = {_, ptr in
-            if let ptr = ptr {
-                free(UnsafeMutableRawPointer(mutating: ptr))
-            }
-        }
-        // Assign output data
-        let error = vImageScale_ARGB8888(&inBuff, &outBuff, nil, vImage_Flags(kvImageHighQualityResampling))
-        guard error == kvImageNoError else {return nil}
-        CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: 0))
-        
-        var dstPixelBuffer: CVPixelBuffer?
-        let pixelFormat = CVPixelBufferGetPixelFormatType(imageBuffer)
-        let status = CVPixelBufferCreateWithBytes(nil, scaleWidth, scaleHeight, pixelFormat, outData, bytes_per_row, releaseCallback, nil, nil, &dstPixelBuffer)
-        guard status == kCVReturnSuccess else {return nil}
-        return dstPixelBuffer
-    }
-    
-    private func resizePixelBuffer(imageBuffer: CVPixelBuffer, scaleWidth: Int, scaleHeight: Int) -> CVPixelBuffer? {
-        var pixelBuffer: CVPixelBuffer?
-        let status = CVPixelBufferCreate(nil, scaleWidth, scaleHeight,
-                                         kCVPixelFormatType_32BGRA, nil,
-                                         &pixelBuffer)
-        if status != kCVReturnSuccess {
-            print("Error: could not create pixel buffer", status)
-            return nil
-        }
-        
-        let ciimage = CIImage(cvPixelBuffer: imageBuffer)
-        let sx = CGFloat(scaleWidth) / CGFloat(CVPixelBufferGetWidth(imageBuffer))
-        let sy = CGFloat(scaleHeight) / CGFloat(CVPixelBufferGetHeight(imageBuffer))
-        let scaleTransform = CGAffineTransform(scaleX: sx, y: sy)
-        let scaledImage = ciimage.transformed(by: scaleTransform)
-        let context = CIContext()
-        context.render(scaledImage, to: pixelBuffer!)
-        return pixelBuffer
-    }
-
-    /*
-    // MARK: Sample buffer to UIImage conversion
-    private func imageFromSampleBuffer(sampleBuffer: CMSampleBuffer) -> CVPixelBuffer? {
-        // Try and edit this function to return scaled down CMSampleBuffer to remove unnecessary conversion to CIImage, CGImage, UIImage, then byte array
-        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return nil }
-        guard let resizedBuffer = resizePixelBuffer(imageBuffer: imageBuffer, scaleWidth: 416, scaleHeight: 416) else {return nil}
-        return resizedBuffer
-        /*
-        let width = CVPixelBufferGetWidth(imageBuffer)
-        let height = CVPixelBufferGetHeight(imageBuffer)
-        let ciImage = CIImage(cvPixelBuffer: imageBuffer)
-        let resizedImage = ciImage.transformed(by: CGAffineTransform(scaleX: 224.0 / CGFloat(width), y: 224.0 / CGFloat(height)))
-        return resizedImage
-        */
-    }
-    
-    // MARK: AVCaptureVideoDataOutputSampleBufferDelegate
-    public func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let cvPixelBuffer = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
-        DispatchQueue.main.async { [unowned self] in
-            self.delegate?.captured(buffer: cvPixelBuffer)
-        }
-    }
-    */
 }
 
 extension FrameExtractor: AVCaptureVideoDataOutputSampleBufferDelegate {
@@ -204,7 +105,6 @@ extension FrameExtractor: AVCaptureVideoDataOutputSampleBufferDelegate {
         // Because lowering the capture device's FPS looks ugly in the preview,
         // we capture at full speed but only call the delegate at its desired
         // framerate.
-        let timestamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
         let currentTime = CACurrentMediaTime()
         
         // send image to neural network
@@ -220,6 +120,5 @@ extension FrameExtractor: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
     public func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        //print("dropped frame")
     }
 }

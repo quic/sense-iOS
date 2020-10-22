@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  20bn-realtimenet-iOS
-//
-//  Created by Antoine Mercier on 2020-10-22.
-//
-
 import UIKit
 import VideoToolbox
 
@@ -25,7 +18,6 @@ class ViewController: UIViewController, WorkoutModelDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         model.delegate = self
         cameraPermissionManager()
         model.startWorkout()
@@ -51,13 +43,13 @@ class ViewController: UIViewController, WorkoutModelDelegate {
     }
     
     func showDebugImage(_ resizedPixelBuffer: CVPixelBuffer, transform:CGAffineTransform) {
-            DispatchQueue.main.async {
-                var debugImage: CGImage?
-                let img = UIImage.init(ciImage: CIImage(cvPixelBuffer: resizedPixelBuffer), scale:1, orientation:UIImage.Orientation.upMirrored)
-                VTCreateCGImageFromCVPixelBuffer(resizedPixelBuffer, options: nil, imageOut: &debugImage)
-                self.imageView.image = img
-                // flip the image
-                self.imageView.transform = transform
+        DispatchQueue.main.async {
+            var debugImage: CGImage?
+            let img = UIImage.init(ciImage: CIImage(cvPixelBuffer: resizedPixelBuffer), scale:1, orientation:UIImage.Orientation.upMirrored)
+            VTCreateCGImageFromCVPixelBuffer(resizedPixelBuffer, options: nil, imageOut: &debugImage)
+            self.imageView.image = img
+            // flip the image
+            self.imageView.transform = transform
         }
     }
     
@@ -67,9 +59,6 @@ class ViewController: UIViewController, WorkoutModelDelegate {
             self.METLabel.text = score
         }
     }
-    
-
-
 }
 
 extension ViewController: WorkoutPreviewDelegate {

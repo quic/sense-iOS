@@ -1,8 +1,3 @@
-//
-//  Inference.swift
-//  UnityTest
-//
-
 import Foundation
 import CoreML
 import Accelerate
@@ -17,6 +12,7 @@ class InferenceLocal : NSObject {
     public static let inputHeight: Int = 224
     public static let maxBoundingBoxes = 3
     public static let dimGlobalClassifier = 2759
+
     
     struct Prediction {
         let classIndex: Int
@@ -39,9 +35,9 @@ class InferenceLocal : NSObject {
     
     private func init_cache() {
         // cached_outputs_0 is the most recent output
-        cachedOutputs0 = realtimenetOutput.init(module_features_3_save_0: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_3_save_1: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_7_save_0: try! MLMultiArray(shape: [56,28,20], dataType: MLMultiArrayDataType.float32), module_features_11_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_11_save_1: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_14_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_17_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_20_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_23_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), module_features_25_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), output_globalclassifier: try! MLMultiArray(shape: [2619], dataType: MLMultiArrayDataType.float32))
+        cachedOutputs0 = realtimenetOutput.init(module_features_3_save_0: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_3_save_1: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_7_save_0: try! MLMultiArray(shape: [56,28,20], dataType: MLMultiArrayDataType.float32), module_features_11_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_11_save_1: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_14_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_17_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_20_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_23_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), module_features_25_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), output_globalclassifier: try! MLMultiArray(shape: [NSNumber(value: InferenceLocal.dimGlobalClassifier)], dataType: MLMultiArrayDataType.float32))
         
-        cachedOutputs1 = realtimenetOutput.init(module_features_3_save_0: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_3_save_1: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_7_save_0: try! MLMultiArray(shape: [56,28,20], dataType: MLMultiArrayDataType.float32), module_features_11_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_11_save_1: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_14_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_17_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_20_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_23_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), module_features_25_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), output_globalclassifier: try! MLMultiArray(shape: [2619], dataType: MLMultiArrayDataType.float32))
+        cachedOutputs1 = realtimenetOutput.init(module_features_3_save_0: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_3_save_1: try! MLMultiArray(shape: [32,56,40], dataType: MLMultiArrayDataType.float32), module_features_7_save_0: try! MLMultiArray(shape: [56,28,20], dataType: MLMultiArrayDataType.float32), module_features_11_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_11_save_1: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_14_save_0: try! MLMultiArray(shape: [112,14,10], dataType: MLMultiArrayDataType.float32), module_features_17_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_20_save_0: try! MLMultiArray(shape: [160,14,10], dataType: MLMultiArrayDataType.float32), module_features_23_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), module_features_25_save_0: try! MLMultiArray(shape: [272,7,5], dataType: MLMultiArrayDataType.float32), output_globalclassifier: try! MLMultiArray(shape: [NSNumber(value: InferenceLocal.dimGlobalClassifier)], dataType: MLMultiArrayDataType.float32))
 }
     
     

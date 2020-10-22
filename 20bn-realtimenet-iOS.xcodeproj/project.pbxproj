@@ -20,6 +20,7 @@
 		A0C7EF982541F71D008A066F /* FrameExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF962541F71D008A066F /* FrameExtraction.swift */; };
 		A0C7EF9D2541F944008A066F /* realtimenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */; };
 		A0C7EFA22541FB8A008A066F /* realtimenet_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EFA12541FB89008A066F /* realtimenet_labels.json */; };
+		A0C7EFA7254223FB008A066F /* Array+argmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EFA6254223FB008A066F /* Array+argmin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A0C7EF962541F71D008A066F /* FrameExtraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtraction.swift; sourceTree = "<group>"; };
 		A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realtimenet.mlmodel; sourceTree = "<group>"; };
 		A0C7EFA12541FB89008A066F /* realtimenet_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = realtimenet_labels.json; sourceTree = "<group>"; };
+		A0C7EFA6254223FB008A066F /* Array+argmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+argmin.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +113,14 @@
 				A0C7EF822541F606008A066F /* WorkoutModel.swift */,
 				A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */,
 				A0C7EF872541F615008A066F /* MotionManager.swift */,
+				A0C7EFA6254223FB008A066F /* Array+argmin.swift */,
+				A0C7EF522541F49E008A066F /* Info.plist */,
 				A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */,
 				A0C7EFA12541FB89008A066F /* realtimenet_labels.json */,
 				A0C7EF942541F71D008A066F /* VideoRecorder */,
 				A0C7EF4A2541F49A008A066F /* Main.storyboard */,
 				A0C7EF4D2541F49E008A066F /* Assets.xcassets */,
 				A0C7EF4F2541F49E008A066F /* LaunchScreen.storyboard */,
-				A0C7EF522541F49E008A066F /* Info.plist */,
 			);
 			path = "20bn-realtimenet-iOS";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				A0C7EF9D2541F944008A066F /* realtimenet.mlmodel in Sources */,
 				A0C7EF882541F615008A066F /* MotionManager.swift in Sources */,
 				A0C7EF832541F606008A066F /* WorkoutModel.swift in Sources */,
+				A0C7EFA7254223FB008A066F /* Array+argmin.swift in Sources */,
 				A0C7EF982541F71D008A066F /* FrameExtraction.swift in Sources */,
 				A0C7EF492541F49A008A066F /* ViewController.swift in Sources */,
 				A0C7EF452541F49A008A066F /* AppDelegate.swift in Sources */,

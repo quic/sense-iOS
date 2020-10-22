@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  20bn-realtimenet-iOS
-//
-//  Created by Antoine Mercier on 2020-10-22.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -16,9 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
 }
 
 
