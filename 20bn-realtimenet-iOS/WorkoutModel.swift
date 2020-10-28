@@ -168,8 +168,6 @@ final class WorkoutModel: WorkoutsType {
     
     private func processPrediction(pixelBuffer: CVPixelBuffer) {
         // Resize the input with Core Image to the desired output.
-        let srcWidth = CVPixelBufferGetWidth(pixelBuffer)
-        let srcHeight = CVPixelBufferGetHeight(pixelBuffer)
         guard let resizedPixelBuffer = resizePixelBuffer(pixelBuffer,
                                                          width: InferenceLocal.inputWidth,
                                                          height: InferenceLocal.inputHeight) else { return }
