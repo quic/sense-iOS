@@ -7,7 +7,7 @@ Currently, only the efficentnetLite 4 version of the gesture detection is availa
 The efficientnet backbone run on iOS devices with A11 chips or better. It might work on devices with A10 chips, but it is not testsed.
 
 
-![](gifs/gesture_recognition.gif)
+![](gifs/realtimenetiOS_gesture.gif)
 
 ## Getting Started
 
