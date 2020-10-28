@@ -12,7 +12,7 @@
         <!--Camera is turned off-->
         <scene sceneID="8Gv-Jg-s6C">
             <objects>
-                <viewController storyboardIdentifier="cameraTurnedOffViewController" id="cj7-bn-jKz" customClass="CameraTurnedOffViewController" customModule="iOS_PixelCalorieMeter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cameraTurnedOffViewController" id="cj7-bn-jKz" customClass="CameraTurnedOffViewController" customModule="_0bn_realtimenet_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0am-uh-RT7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
         <!--View Controller-->
         <scene sceneID="hzR-wL-rNp">
             <objects>
-                <viewController id="WWj-JR-5Vg" customClass="ViewController" customModule="iOS_PixelCalorieMeter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WWj-JR-5Vg" customClass="ViewController" customModule="_0bn_realtimenet_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mBm-o7-liY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,9 +72,9 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-I0-vph">
-                                <rect key="frame" x="20" y="702" width="101" height="60"/>
+                                <rect key="frame" x="20" y="723.5" width="65.5" height="38.5"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

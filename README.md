@@ -7,6 +7,9 @@ Currently, only our gesture detection demo using our efficientnet backbone is av
 The efficientnet backbone was confirmed to run smoothly on iOS devices with A11 chips (e.g. iPhone 8 or higher). 
 It might also work on devices with A10 chips (e.g. iPad 6/7, iPhone 7).
 
+
+![](gifs/realtimenetiOS_gesture.gif)
+
 ## Getting Started
 
 ### 1. Clone the Repository
