@@ -1,47 +1,53 @@
 # 20bn-realtimenet-iOS
 
 20bn-realtimenet-iOS is the iOS version of [20bn-realtimenet](https://github.com/TwentyBN/20bn-realtimenet).
-You can convert some pytorch model from 20bn-realtimenet](https://github.com/TwentyBN/20bn-realtimenet) and run them on an iOS device. 
-Currently, only the efficentnetLite 4 version of the gesture detection is available for conversion. More will come soon.
+You can convert some pytorch models from [20bn-realtimenet](https://github.com/TwentyBN/20bn-realtimenet) and run them on an iOS device. 
+Currently, only our gesture detection demo using our efficientnet backbone is available for conversion. More will come soon.
 
-The efficientnet backbone run on iOS devices with A11 chips or better. It might work on devices with A10 chips, but it is not testsed.
+The efficientnet backbone was confirmed to run smoothly on iOS devices with A11 chips (e.g. iPhone 8 or higher). 
+It might also work on devices with A10 chips (e.g. iPad 6/7, iPhone 7).
 
 ## Getting Started
 
 ### 1. Clone the Repository
 
 To begin, clone this repository to a local directory of your choice:
+
+```shell
+git clone https://github.com/TwentyBN/20bn-realtimenet-iOS.git
 ```
-git clone git@github.com:TwentyBN/20bn-realtimenet-iOS.git
-cd 20bn-realtimenet-iOS.git
+
+### 2. Clone and Install the 20bn-realtimenet Repository
+
+You will need [20bn-realtimenet](https://github.com/TwentyBN/20bn-realtimenet) to convert Pytorch models to CoreML. 
+Clone it:
+
+```shell
+git clone https://github.com/TwentyBN/20bn-realtimenet.git
+cd 20bn-realtimenet
 ```
 
-### 2. Install the 20bn-realtimenet Repository
+and follow the instructions to install dependencies.
 
-Install this repository: [20bn-realtimenet](https://github.com/TwentyBN/20bn-realtimenet) and follow the instructions to install it.
+### 3. Download our pretrained models and convert them to CoreML
 
-### 3. Get the models and convert them to coreml
+First, download our pretrained models (see instructions in 20bn-realtimenet, you will have to agree our terms and conditions).
+Then, use the following script to produce a CoreML version of our gesture control demo:
 
-In 20bn-realtimenet, follow the instruction to download the models (you will need to accept the terms).
-Then follow the instruction to convert a model into coreml.
+```shell
+python scripts/conversion/convert_to_coreml.py --backbone=efficientnet --classifier=efficient_net_gesture_control --output_name=realtimenet
+```
+
+The should produce the following CoreML file: `20bn-realtimenet/resources/coreml/realtimenet.mlmodel`.
 
 ### 4. Copy the converted model into this repo
 
-The output of the conversion script will be found in /path/to/20bn-realtimenet/resources/coreml.
-Rename the output coreml file to realtimenet.mlmodel and move it to 20bn-realtimenet-iOS/20bn-realtimenet-iOS/realtimenet.mlmodel
+Move the produced CoreML file from `20bn-realtimenet` to `20bn-realtimenet-iOS` 
+and place it in the following location: `20bn-realtimenet-iOS/20bn-realtimenet-iOS/realtimenet.mlmodel`
 
-### 5. Changes to InferenceLocal.swift 
-Set the dimGlobalClassifier to the right number of outputs. 
-By default, it is set to 30 (number of outputs for the gesture control).
+### 5. Build the project and have fun
 
-### 6. Changes to realtimmenet_labels.json 
-Change the realtimmenet_labels.json file to reflect the outputs of your converted model.
-By default, this file is filled with classes for the gesture control.
-
-### 7. Build the project and enjoy it
-The code is ready, build the project and enjoy the result on your device. 
-
-
+Everything should be ready now, build the project and have fun. 
 
 ## License 
 
