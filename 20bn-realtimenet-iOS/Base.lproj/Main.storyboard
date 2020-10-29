@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The app can't see you. To fix this, please allow Ally Fitness access to your camera. Turn on Camera in your device settings." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-MT-vqj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The app can't see you. To fix this, please allow realtimenet access to your camera. Turn on Camera in your device settings." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-MT-vqj">
                                 <rect key="frame" x="16" y="71" width="382" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="AccentColor"/>
@@ -101,9 +101,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Sw3-nJ-lHq"/>
                     <connections>
-                        <outlet property="METLabel" destination="rID-1P-Qpw" id="ukp-Gy-Rqa"/>
-                        <outlet property="caloriesLabel" destination="Ma8-I0-vph" id="Pou-rj-XdX"/>
                         <outlet property="imageView" destination="Yba-cK-fgg" id="C4F-c1-3R9"/>
+                        <outlet property="label" destination="Ma8-I0-vph" id="b7R-Rn-uts"/>
+                        <outlet property="score" destination="rID-1P-Qpw" id="CPt-qk-xam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vk-3P-2iI" sceneMemberID="firstResponder"/>

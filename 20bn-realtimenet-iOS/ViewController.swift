@@ -12,15 +12,15 @@ protocol WorkoutPreviewDelegate: AnyObject {
 
 class ViewController: UIViewController, WorkoutModelDelegate {
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var METLabel: UILabel!
-    @IBOutlet weak var caloriesLabel: UILabel!
-    let model = WorkoutModel()
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var score: UILabel!
+    let model = InferenceModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         model.delegate = self
         cameraPermissionManager()
-        model.startWorkout()
+        model.startInference()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -28,7 +28,7 @@ class ViewController: UIViewController, WorkoutModelDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if model.workoutStarted {
+        if model.inferenceStarted {
             model.frameExtractor.start()
         }
     }
@@ -55,8 +55,8 @@ class ViewController: UIViewController, WorkoutModelDelegate {
     
     func showPrediction(label: String, score: String) {
         DispatchQueue.main.async {
-            self.caloriesLabel.text = label
-            self.METLabel.text = score
+            self.label.text = label
+            self.score.text = score
         }
     }
 }
@@ -67,13 +67,13 @@ extension ViewController: WorkoutPreviewDelegate {
         switch self.model.cameraPermission {
         case .authorized:
             self.model.setUpCamera()
-            self.model.startWorkout()
+            self.model.startInference()
         case .notDetermined:
             self.model.requestCameraAccess { granted in
                 DispatchQueue.main.sync {
                     if granted {
                         self.model.setUpCamera()
-                        self.model.startWorkout()
+                        self.model.startInference()
                     } else {
                         self.navigationController?.setNavigationBarHidden(false, animated: false)
                         self.navigateToCameraPermission()

@@ -12,13 +12,13 @@ protocol GUIControllerDelegate {
 }
 
 // Interface for ViewController
-protocol WorkoutsType {
+protocol InferenceType {
     var cameraPermission: AVAuthorizationStatus { get }
     func requestCameraAccess(completion: @escaping (Bool) -> Void)
 }
 
 
-final class WorkoutModel: WorkoutsType {
+final class InferenceModel: InferenceType {
     
     // Class declarations
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -26,18 +26,15 @@ final class WorkoutModel: WorkoutsType {
     var inference =  InferenceLocal()
     var motionManager = MotionManager()
     var cameraPermission: AVAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
-    var isExercise = false
     
     // Variable declarations for video processing
     var resizedPixelBuffer: CVPixelBuffer?
     var frameCapturingStartTime = CACurrentMediaTime()
     var lastPredictionTime = CACurrentMediaTime()
-    let fractionImageProcessRest = 1
-    var numFrame = 0
-    
+
     // Variable declarations for motion control
     var deviceOrientation = UIDevice.current.orientation
-    var workoutStarted = false
+    var inferenceStarted = false
     var cameraReady = false
     var viewAppeared = false
     
@@ -62,21 +59,16 @@ final class WorkoutModel: WorkoutsType {
                     int2lab = Dictionary(uniqueKeysWithValues: lab2int.map({ ($1, $0) }))
                   }
               } catch {
-              }
+            }
         }
     }
-   
     
-    func startWorkout() {
-
+    func startInference() {
         UIApplication.shared.isIdleTimerDisabled = true
-
-        // create and initialize video recorder
-        
-        // wait for camera and state machine to be ready
+        // wait for camera to be ready
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             if self.cameraReady {
-                self.workoutStarted = true
+                self.inferenceStarted = true
                 timer.invalidate()
                 self.frameExtractor.delegate = self
                 self.frameExtractor.start()
@@ -86,13 +78,13 @@ final class WorkoutModel: WorkoutsType {
     }
     
     func goBackground() {
-        if workoutStarted {
+        if inferenceStarted {
             frameExtractor.stop()
         }
     }
     
     func leaveBackground() {
-        if workoutStarted {
+        if inferenceStarted {
             frameExtractor.delegate = self
             frameExtractor.start()
         }
@@ -136,10 +128,7 @@ final class WorkoutModel: WorkoutsType {
                 }
                 delegate?.showPrediction(label: label, score: score)
             }
-            
         }
-        
-        
     }
     
     func softmax(logits: [Float32]) -> [Float32] {
@@ -188,51 +177,24 @@ final class WorkoutModel: WorkoutsType {
         if noRotation {
             let padded = resizedPixelBuffer
             delegate?.showDebugImage(padded, transform: transform)
-            if isExercise {
-                inference.collectFrames(imageBuffer: padded)
-            } else {
-                numFrame += 1
-                if numFrame == fractionImageProcessRest {
-                    numFrame = 0
-                    inference.collectFrames(imageBuffer: padded)
-                }
-            }
+            inference.collectFrames(imageBuffer: padded)
         } else {
             let padded = rotatedBuffer!
             delegate?.showDebugImage(padded, transform: transform)
-            if isExercise {
-                inference.collectFrames(imageBuffer: padded)
-            } else {
-                numFrame += 1
-                if numFrame == fractionImageProcessRest {
-                    numFrame = 0
-                    inference.collectFrames(imageBuffer: padded)
-                }
-            }
+            inference.collectFrames(imageBuffer: padded)
         }
-    }
-    
-    private func endWorkout() {
-        workoutStarted = false
-        frameExtractor.stop()
-
-        
-        DispatchQueue.main.async {
-            UIApplication.shared.isIdleTimerDisabled = false
-        }
-        
     }
 }
 
 
-extension WorkoutModel: GUIControllerDelegate{
+extension InferenceModel: GUIControllerDelegate{
 
     func getOrientation() -> UIDeviceOrientation {
         return self.deviceOrientation
     }
 }
 
-extension WorkoutModel: MotionManagerDelegate {
+extension InferenceModel: MotionManagerDelegate {
     public func rotated(_ orientation: UIDeviceOrientation) {
         self.deviceOrientation = orientation
         // Handle rotation
@@ -241,7 +203,7 @@ extension WorkoutModel: MotionManagerDelegate {
 }
 
 
-extension WorkoutModel: FrameExtractorDelegate {
+extension InferenceModel: FrameExtractorDelegate {
     func captured(_ capture: FrameExtractor, didCaptureVideoFrame pixelBuffer: CVPixelBuffer?) {
         if let pixelBuffer = pixelBuffer {
             DispatchQueue.global().async {

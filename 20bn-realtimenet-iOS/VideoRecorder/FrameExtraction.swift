@@ -10,7 +10,6 @@ public protocol FrameExtractorDelegate: class {
 public class FrameExtractor: NSObject {
     weak var delegate: FrameExtractorDelegate?
     public var fps = 16
-    public var fps2 = 30
     public var deviceOrientation = "portrait"
 
     private var position = AVCaptureDevice.Position.front
