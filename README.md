@@ -52,6 +52,21 @@ and place it in the following location: `20bn-realtimenet-iOS/20bn-realtimenet-i
 
 Everything should be ready now, build the project and have fun. 
 
+
+## Citation
+
+We now have a [blogpost](https://medium.com/twentybn/towards-situated-visual-ai-via-end-to-end-learning-on-video-clips-2832bd9d519f) you can cite:
+
+```bibtex
+@misc{realtimenet2020blogpost,
+    author = {Guillaume Berger and Antoine Mercier and Florian Letsch and Cornelius Boehm and Sunny Panchal and Nahua Kang and Mark Todorovich and Ingo Bax and Roland Memisevic},
+    title = {Towards situated visual AI via end-to-end learning on video clips},
+    howpublished = {\url{https://medium.com/twentybn/towards-situated-visual-ai-via-end-to-end-learning-on-video-clips-2832bd9d519f}},
+    note = {online; accessed 23 October 2020},
+    year=2020,
+}
+```
+
 ## License 
 
 The code is copyright (c) 2020 Twenty Billion Neurons GmbH under an MIT Licence. See the file LICENSE for details. Note that this license 
