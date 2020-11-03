@@ -48,6 +48,15 @@ The should produce the following CoreML file: `20bn-realtimenet/resources/coreml
 Move the produced CoreML file from `20bn-realtimenet` to `20bn-realtimenet-iOS` 
 and place it in the following location: `20bn-realtimenet-iOS/20bn-realtimenet-iOS/realtimenet.mlmodel`
 
+### 5. Changes to InferenceLocal.swift 
+Set the dimGlobalClassifier to the right number of outputs. 
+By default, it is set to 30 (number of outputs for the gesture control).
+
+### 6. Changes to realtimmenet_labels.json 
+Change the realtimmenet_labels.json file to reflect the outputs of your converted model.
+You can replace this file with the class2int.json produced by the classifier training.
+By default, this file is filled with classes for the gesture control.
+
 ### 5. Build the project and have fun
 
 Everything should be ready now, build the project and have fun. 
