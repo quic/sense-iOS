@@ -54,10 +54,10 @@ By default, it is set to 30 (number of outputs for the gesture control).
 
 ### 6. Changes to realtimmenet_labels.json 
 Change the realtimmenet_labels.json file to reflect the outputs of your converted model.
-You can replace this file with the class2int.json produced by the classifier training.
+You can replace this file with the label2int.json produced by the classifier training.
 By default, this file is filled with classes for the gesture control.
 
-### 5. Build the project and have fun
+### 7. Build the project and have fun
 
 Everything should be ready now, build the project and have fun. 
 
