@@ -2,7 +2,7 @@
 
 This repository contains the iOS version of [20bn-realtimenet](https://github.com/TwentyBN/20bn-realtimenet) which allows you to build an iOS demo app running the pytorch models after converting them to CoreML using the provided script. 
 
-Currently, only our gesture detection demo using our efficientnet backbone is available for conversion with more to come soon.
+You can convert and deploy the existing gesture detection model as is, or, use the transfer learning script in [20bn-realtimenet](https://github.com/TwentyBN/20bn-realtimenet) to train on your own custom classification outputs on top of it. More models will be supported soon.
 
 The efficientnet backbone was confirmed to run smoothly on iOS devices with A11 chips (e.g. iPhone 8 or higher) and may also work on devices with A10 chips (e.g. iPad 6/7, iPhone 7).
 
