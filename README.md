@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/TwentyBN/20bn-realtimenet-ios/beautification-phase1/docs/imgs/temp_realtimenetios_header_1.png" height="45px">
+<img src="https://raw.githubusercontent.com/TwentyBN/20bn-realtimenet-ios/beautification-phase1/docs/imgs/temp_realtimenetios_header_1.png" height="70px">
 
 **State-of-the-art Real-time Action Recognition for iOS**
 
@@ -114,10 +114,10 @@ You can now open the iOS project with Xcode and build it to your device. Have fu
 Using our transfer learning script, it is possible to further fine-tune our model to your own classification tasks. If
  you do so, you'll have to reflect the new outputs in various files in the iOS project: 
 
-#### InferenceLocal.swift 
+#### `20bn-realtimenet-iOS/InferenceLocal.swift` 
 The number of model outputs must be updated in dimGlobalClassifier (default: 30 - number of labels in the gesture control task).
 
-#### realtimmenet_labels.json 
+#### `20bn-realtimenet-iOS/realtimmenet_labels.json` 
 
 By default, the dictionary in `realtimmenet_labels.json` contains the labels our model was trained on for the gesture control task. Replace these with the contents of the `label2int.json` file produced during training.
 
