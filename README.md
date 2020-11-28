@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/TwentyBN/20bn-realtimenet-ios/beautification-phase1/docs/imgs/temp_realtimenetios_header_1.png" height="70px">
+<img src="https://raw.githubusercontent.com/TwentyBN/20bn-realtimenet-ios/master/docs/imgs/temp_realtimenetios_header_1.png" height="70px">
 
 **State-of-the-art Real-time Action Recognition for iOS**
 
@@ -43,7 +43,7 @@ You can convert and deploy the existing gesture detection model as is, or, use t
 The model uses an efficientnet backbone and was confirmed to run smoothly on iOS devices with A11 chips (e.g. iPhone 8 or higher) and may also work on devices with A10 chips (e.g. iPad 6/7, iPhone 7).
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/TwentyBN/20bn-realtimenet-ios/beautification-phase1/docs/gifs/realtimenetiOS_gesture.gif" width="400px">
+    <img src="https://raw.githubusercontent.com/TwentyBN/20bn-realtimenet-ios/master/docs/gifs/realtimenetiOS_gesture.gif" width="400px">
 </p>
 
 ---
