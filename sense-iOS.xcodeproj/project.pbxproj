@@ -18,8 +18,8 @@
 		A0C7EF902541F70C008A066F /* InferenceLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */; };
 		A0C7EF972541F71D008A066F /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF952541F71D008A066F /* CVPixelBuffer+Helpers.swift */; };
 		A0C7EF982541F71D008A066F /* FrameExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF962541F71D008A066F /* FrameExtraction.swift */; };
-		A0C7EF9D2541F944008A066F /* realtimenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */; };
-		A0C7EFA22541FB8A008A066F /* realtimenet_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EFA12541FB89008A066F /* realtimenet_labels.json */; };
+		A0C7EF9D2541F944008A066F /* sensenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF9C2541F944008A066F /* sensenet.mlmodel */; };
+		A0C7EFA22541FB8A008A066F /* sensenet_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EFA12541FB89008A066F /* sensenet_labels.json */; };
 		A0C7EFA7254223FB008A066F /* Array+argmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EFA6254223FB008A066F /* Array+argmin.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,35 +29,35 @@
 			containerPortal = A0C7EF392541F49A008A066F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A0C7EF402541F49A008A066F;
-			remoteInfo = "20bn-realtimenet-iOS";
+			remoteInfo = "sense-iOS";
 		};
 		A0C7EF632541F49F008A066F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0C7EF392541F49A008A066F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A0C7EF402541F49A008A066F;
-			remoteInfo = "20bn-realtimenet-iOS";
+			remoteInfo = "sense-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A0C7EF412541F49A008A066F /* 20bn-realtimenet-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20bn-realtimenet-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C7EF412541F49A008A066F /* sense-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sense-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C7EF442541F49A008A066F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0C7EF482541F49A008A066F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0C7EF4B2541F49A008A066F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0C7EF4D2541F49E008A066F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0C7EF502541F49E008A066F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0C7EF522541F49E008A066F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0C7EF572541F49F008A066F /* 20bn-realtimenet-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20bn-realtimenet-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0C7EF622541F49F008A066F /* 20bn-realtimenet-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20bn-realtimenet-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C7EF572541F49F008A066F /* sense-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sense-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C7EF622541F49F008A066F /* sense-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sense-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C7EF7D2541F5DD008A066F /* CameraTurnedOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTurnedOffViewController.swift; sourceTree = "<group>"; };
 		A0C7EF822541F606008A066F /* InferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceModel.swift; sourceTree = "<group>"; };
 		A0C7EF872541F615008A066F /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceLocal.swift; sourceTree = "<group>"; };
 		A0C7EF952541F71D008A066F /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
 		A0C7EF962541F71D008A066F /* FrameExtraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtraction.swift; sourceTree = "<group>"; };
-		A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realtimenet.mlmodel; sourceTree = "<group>"; };
-		A0C7EFA12541FB89008A066F /* realtimenet_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = realtimenet_labels.json; sourceTree = "<group>"; };
+		A0C7EF9C2541F944008A066F /* sensenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sensenet.mlmodel; sourceTree = "<group>"; };
+		A0C7EFA12541FB89008A066F /* sensenet_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sensenet_labels.json; sourceTree = "<group>"; };
 		A0C7EFA6254223FB008A066F /* Array+argmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+argmin.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,7 @@
 		A0C7EF382541F49A008A066F = {
 			isa = PBXGroup;
 			children = (
-				A0C7EF432541F49A008A066F /* 20bn-realtimenet-iOS */,
+				A0C7EF432541F49A008A066F /* sense-iOS */,
 				A0C7EF422541F49A008A066F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,14 +97,14 @@
 		A0C7EF422541F49A008A066F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0C7EF412541F49A008A066F /* 20bn-realtimenet-iOS.app */,
-				A0C7EF572541F49F008A066F /* 20bn-realtimenet-iOSTests.xctest */,
-				A0C7EF622541F49F008A066F /* 20bn-realtimenet-iOSUITests.xctest */,
+				A0C7EF412541F49A008A066F /* sense-iOS.app */,
+				A0C7EF572541F49F008A066F /* sense-iOSTests.xctest */,
+				A0C7EF622541F49F008A066F /* sense-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A0C7EF432541F49A008A066F /* 20bn-realtimenet-iOS */ = {
+		A0C7EF432541F49A008A066F /* sense-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				A0C7EF442541F49A008A066F /* AppDelegate.swift */,
@@ -115,14 +115,14 @@
 				A0C7EF872541F615008A066F /* MotionManager.swift */,
 				A0C7EFA6254223FB008A066F /* Array+argmin.swift */,
 				A0C7EF522541F49E008A066F /* Info.plist */,
-				A0C7EF9C2541F944008A066F /* realtimenet.mlmodel */,
-				A0C7EFA12541FB89008A066F /* realtimenet_labels.json */,
+				A0C7EF9C2541F944008A066F /* sensenet.mlmodel */,
+				A0C7EFA12541FB89008A066F /* sensenet_labels.json */,
 				A0C7EF942541F71D008A066F /* VideoRecorder */,
 				A0C7EF4A2541F49A008A066F /* Main.storyboard */,
 				A0C7EF4D2541F49E008A066F /* Assets.xcassets */,
 				A0C7EF4F2541F49E008A066F /* LaunchScreen.storyboard */,
 			);
-			path = "20bn-realtimenet-iOS";
+			path = "sense-iOS";
 			sourceTree = "<group>";
 		};
 		A0C7EF942541F71D008A066F /* VideoRecorder */ = {
@@ -137,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */ = {
+		A0C7EF402541F49A008A066F /* sense-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0C7EF6B2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOS" */;
+			buildConfigurationList = A0C7EF6B2541F49F008A066F /* Build configuration list for PBXNativeTarget "sense-iOS" */;
 			buildPhases = (
 				A0C7EF3D2541F49A008A066F /* Sources */,
 				A0C7EF3E2541F49A008A066F /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = "20bn-realtimenet-iOS";
-			productName = "20bn-realtimenet-iOS";
-			productReference = A0C7EF412541F49A008A066F /* 20bn-realtimenet-iOS.app */;
+			name = "sense-iOS";
+			productName = "sense-iOS";
+			productReference = A0C7EF412541F49A008A066F /* sense-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A0C7EF562541F49E008A066F /* 20bn-realtimenet-iOSTests */ = {
+		A0C7EF562541F49E008A066F /* sense-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0C7EF6E2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSTests" */;
+			buildConfigurationList = A0C7EF6E2541F49F008A066F /* Build configuration list for PBXNativeTarget "sense-iOSTests" */;
 			buildPhases = (
 				A0C7EF532541F49E008A066F /* Sources */,
 				A0C7EF542541F49E008A066F /* Frameworks */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				A0C7EF592541F49F008A066F /* PBXTargetDependency */,
 			);
-			name = "20bn-realtimenet-iOSTests";
-			productName = "20bn-realtimenet-iOSTests";
-			productReference = A0C7EF572541F49F008A066F /* 20bn-realtimenet-iOSTests.xctest */;
+			name = "sense-iOSTests";
+			productName = "sense-iOSTests";
+			productReference = A0C7EF572541F49F008A066F /* sense-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A0C7EF612541F49F008A066F /* 20bn-realtimenet-iOSUITests */ = {
+		A0C7EF612541F49F008A066F /* sense-iOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0C7EF712541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSUITests" */;
+			buildConfigurationList = A0C7EF712541F49F008A066F /* Build configuration list for PBXNativeTarget "sense-iOSUITests" */;
 			buildPhases = (
 				A0C7EF5E2541F49F008A066F /* Sources */,
 				A0C7EF5F2541F49F008A066F /* Frameworks */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				A0C7EF642541F49F008A066F /* PBXTargetDependency */,
 			);
-			name = "20bn-realtimenet-iOSUITests";
-			productName = "20bn-realtimenet-iOSUITests";
-			productReference = A0C7EF622541F49F008A066F /* 20bn-realtimenet-iOSUITests.xctest */;
+			name = "sense-iOSUITests";
+			productName = "sense-iOSUITests";
+			productReference = A0C7EF622541F49F008A066F /* sense-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A0C7EF3C2541F49A008A066F /* Build configuration list for PBXProject "20bn-realtimenet-iOS" */;
+			buildConfigurationList = A0C7EF3C2541F49A008A066F /* Build configuration list for PBXProject "sense-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,9 +225,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */,
-				A0C7EF562541F49E008A066F /* 20bn-realtimenet-iOSTests */,
-				A0C7EF612541F49F008A066F /* 20bn-realtimenet-iOSUITests */,
+				A0C7EF402541F49A008A066F /* sense-iOS */,
+				A0C7EF562541F49E008A066F /* sense-iOSTests */,
+				A0C7EF612541F49F008A066F /* sense-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,7 +240,7 @@
 				A0C7EF512541F49E008A066F /* LaunchScreen.storyboard in Resources */,
 				A0C7EF4E2541F49E008A066F /* Assets.xcassets in Resources */,
 				A0C7EF4C2541F49A008A066F /* Main.storyboard in Resources */,
-				A0C7EFA22541FB8A008A066F /* realtimenet_labels.json in Resources */,
+				A0C7EFA22541FB8A008A066F /* sensenet_labels.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +267,7 @@
 			files = (
 				A0C7EF7E2541F5DD008A066F /* CameraTurnedOffViewController.swift in Sources */,
 				A0C7EF972541F71D008A066F /* CVPixelBuffer+Helpers.swift in Sources */,
-				A0C7EF9D2541F944008A066F /* realtimenet.mlmodel in Sources */,
+				A0C7EF9D2541F944008A066F /* sensenet.mlmodel in Sources */,
 				A0C7EF882541F615008A066F /* MotionManager.swift in Sources */,
 				A0C7EF832541F606008A066F /* InferenceModel.swift in Sources */,
 				A0C7EFA7254223FB008A066F /* Array+argmin.swift in Sources */,
@@ -297,12 +297,12 @@
 /* Begin PBXTargetDependency section */
 		A0C7EF592541F49F008A066F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */;
+			target = A0C7EF402541F49A008A066F /* sense-iOS */;
 			targetProxy = A0C7EF582541F49F008A066F /* PBXContainerItemProxy */;
 		};
 		A0C7EF642541F49F008A066F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A0C7EF402541F49A008A066F /* 20bn-realtimenet-iOS */;
+			target = A0C7EF402541F49A008A066F /* sense-iOS */;
 			targetProxy = A0C7EF632541F49F008A066F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,12 +450,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46U46J8QDH;
-				INFOPLIST_FILE = "20bn-realtimenet-iOS/Info.plist";
+				INFOPLIST_FILE = "sense-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.sense-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,12 +469,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46U46J8QDH;
-				INFOPLIST_FILE = "20bn-realtimenet-iOS/Info.plist";
+				INFOPLIST_FILE = "sense-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.sense-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,18 +488,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46U46J8QDH;
-				INFOPLIST_FILE = "20bn-realtimenet-iOSTests/Info.plist";
+				INFOPLIST_FILE = "sense-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.sense-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20bn-realtimenet-iOS.app/20bn-realtimenet-iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sense-iOS.app/sense-iOS";
 			};
 			name = Debug;
 		};
@@ -510,18 +510,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46U46J8QDH;
-				INFOPLIST_FILE = "20bn-realtimenet-iOSTests/Info.plist";
+				INFOPLIST_FILE = "sense-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.sense-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20bn-realtimenet-iOS.app/20bn-realtimenet-iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sense-iOS.app/sense-iOS";
 			};
 			name = Release;
 		};
@@ -531,17 +531,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46U46J8QDH;
-				INFOPLIST_FILE = "20bn-realtimenet-iOSUITests/Info.plist";
+				INFOPLIST_FILE = "20bn-sense-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.sense-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "20bn-realtimenet-iOS";
+				TEST_TARGET_NAME = "sense-iOS";
 			};
 			name = Debug;
 		};
@@ -551,24 +551,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46U46J8QDH;
-				INFOPLIST_FILE = "20bn-realtimenet-iOSUITests/Info.plist";
+				INFOPLIST_FILE = "20bn-sense-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.-0bn-realtimenet-iOSUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "twentybn.sense-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "20bn-realtimenet-iOS";
+				TEST_TARGET_NAME = "sense-iOS";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0C7EF3C2541F49A008A066F /* Build configuration list for PBXProject "20bn-realtimenet-iOS" */ = {
+		A0C7EF3C2541F49A008A066F /* Build configuration list for PBXProject "sense-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0C7EF692541F49F008A066F /* Debug */,
@@ -577,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0C7EF6B2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOS" */ = {
+		A0C7EF6B2541F49F008A066F /* Build configuration list for PBXNativeTarget "sense-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0C7EF6C2541F49F008A066F /* Debug */,
@@ -586,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0C7EF6E2541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSTests" */ = {
+		A0C7EF6E2541F49F008A066F /* Build configuration list for PBXNativeTarget "sense-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0C7EF6F2541F49F008A066F /* Debug */,
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0C7EF712541F49F008A066F /* Build configuration list for PBXNativeTarget "20bn-realtimenet-iOSUITests" */ = {
+		A0C7EF712541F49F008A066F /* Build configuration list for PBXNativeTarget "sense-iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0C7EF722541F49F008A066F /* Debug */,
