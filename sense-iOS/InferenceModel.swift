@@ -50,7 +50,7 @@ final class InferenceModel: InferenceType {
         inference.delegate = self
         frameCapturingStartTime = CACurrentMediaTime()
         motionManager.delegate = self
-        if let path = Bundle.main.path(forResource: "realtimenet_labels", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "sensenet_labels", ofType: "json") {
             do {
                   let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                   let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
