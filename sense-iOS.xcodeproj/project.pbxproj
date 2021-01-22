@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		626A8CF17AD5F9E6BD34BAF6 /* Pods_sense_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A00D7C183DCE90505FB221 /* Pods_sense_iOS.framework */; };
+		A07C812A25BB6C8E0060018E /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = A07C812925BB6C8D0060018E /* model.tflite */; };
 		A0C7EF452541F49A008A066F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF442541F49A008A066F /* AppDelegate.swift */; };
 		A0C7EF492541F49A008A066F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF482541F49A008A066F /* ViewController.swift */; };
 		A0C7EF4C2541F49A008A066F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EF4A2541F49A008A066F /* Main.storyboard */; };
@@ -18,7 +20,6 @@
 		A0C7EF902541F70C008A066F /* InferenceLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */; };
 		A0C7EF972541F71D008A066F /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF952541F71D008A066F /* CVPixelBuffer+Helpers.swift */; };
 		A0C7EF982541F71D008A066F /* FrameExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF962541F71D008A066F /* FrameExtraction.swift */; };
-		A0C7EF9D2541F944008A066F /* sensenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EF9C2541F944008A066F /* sensenet.mlmodel */; };
 		A0C7EFA22541FB8A008A066F /* sensenet_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = A0C7EFA12541FB89008A066F /* sensenet_labels.json */; };
 		A0C7EFA7254223FB008A066F /* Array+argmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7EFA6254223FB008A066F /* Array+argmin.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43815A5C88CA00E95BDF4325 /* Pods-sense-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sense-iOS.debug.xcconfig"; path = "Target Support Files/Pods-sense-iOS/Pods-sense-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		68A00D7C183DCE90505FB221 /* Pods_sense_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sense_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07C812925BB6C8D0060018E /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
 		A0C7EF412541F49A008A066F /* sense-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sense-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C7EF442541F49A008A066F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0C7EF482541F49A008A066F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +60,9 @@
 		A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceLocal.swift; sourceTree = "<group>"; };
 		A0C7EF952541F71D008A066F /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
 		A0C7EF962541F71D008A066F /* FrameExtraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtraction.swift; sourceTree = "<group>"; };
-		A0C7EF9C2541F944008A066F /* sensenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sensenet.mlmodel; sourceTree = "<group>"; };
 		A0C7EFA12541FB89008A066F /* sensenet_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sensenet_labels.json; sourceTree = "<group>"; };
 		A0C7EFA6254223FB008A066F /* Array+argmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+argmin.swift"; sourceTree = "<group>"; };
+		E60F0C305F40709F64B3FEEC /* Pods-sense-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sense-iOS.release.xcconfig"; path = "Target Support Files/Pods-sense-iOS/Pods-sense-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626A8CF17AD5F9E6BD34BAF6 /* Pods_sense_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,11 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49FEE295AB375959F3011769 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43815A5C88CA00E95BDF4325 /* Pods-sense-iOS.debug.xcconfig */,
+				E60F0C305F40709F64B3FEEC /* Pods-sense-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A0C7EF382541F49A008A066F = {
 			isa = PBXGroup;
 			children = (
 				A0C7EF432541F49A008A066F /* sense-iOS */,
 				A0C7EF422541F49A008A066F /* Products */,
+				49FEE295AB375959F3011769 /* Pods */,
+				F858B1964CFF95D0017FD781 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,11 +127,11 @@
 				A0C7EF482541F49A008A066F /* ViewController.swift */,
 				A0C7EF7D2541F5DD008A066F /* CameraTurnedOffViewController.swift */,
 				A0C7EF822541F606008A066F /* InferenceModel.swift */,
+				A07C812925BB6C8D0060018E /* model.tflite */,
 				A0C7EF8F2541F70C008A066F /* InferenceLocal.swift */,
 				A0C7EF872541F615008A066F /* MotionManager.swift */,
 				A0C7EFA6254223FB008A066F /* Array+argmin.swift */,
 				A0C7EF522541F49E008A066F /* Info.plist */,
-				A0C7EF9C2541F944008A066F /* sensenet.mlmodel */,
 				A0C7EFA12541FB89008A066F /* sensenet_labels.json */,
 				A0C7EF942541F71D008A066F /* VideoRecorder */,
 				A0C7EF4A2541F49A008A066F /* Main.storyboard */,
@@ -134,6 +150,14 @@
 			path = VideoRecorder;
 			sourceTree = "<group>";
 		};
+		F858B1964CFF95D0017FD781 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68A00D7C183DCE90505FB221 /* Pods_sense_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0C7EF6B2541F49F008A066F /* Build configuration list for PBXNativeTarget "sense-iOS" */;
 			buildPhases = (
+				9B91162D938F05FCE615CDF3 /* [CP] Check Pods Manifest.lock */,
 				A0C7EF3D2541F49A008A066F /* Sources */,
 				A0C7EF3E2541F49A008A066F /* Frameworks */,
 				A0C7EF3F2541F49A008A066F /* Resources */,
@@ -237,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07C812A25BB6C8E0060018E /* model.tflite in Resources */,
 				A0C7EF512541F49E008A066F /* LaunchScreen.storyboard in Resources */,
 				A0C7EF4E2541F49E008A066F /* Assets.xcassets in Resources */,
 				A0C7EF4C2541F49A008A066F /* Main.storyboard in Resources */,
@@ -260,6 +286,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B91162D938F05FCE615CDF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sense-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0C7EF3D2541F49A008A066F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -267,7 +318,6 @@
 			files = (
 				A0C7EF7E2541F5DD008A066F /* CameraTurnedOffViewController.swift in Sources */,
 				A0C7EF972541F71D008A066F /* CVPixelBuffer+Helpers.swift in Sources */,
-				A0C7EF9D2541F944008A066F /* sensenet.mlmodel in Sources */,
 				A0C7EF882541F615008A066F /* MotionManager.swift in Sources */,
 				A0C7EF832541F606008A066F /* InferenceModel.swift in Sources */,
 				A0C7EFA7254223FB008A066F /* Array+argmin.swift in Sources */,
@@ -445,6 +495,7 @@
 		};
 		A0C7EF6C2541F49F008A066F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43815A5C88CA00E95BDF4325 /* Pods-sense-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +515,7 @@
 		};
 		A0C7EF6D2541F49F008A066F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E60F0C305F40709F64B3FEEC /* Pods-sense-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
