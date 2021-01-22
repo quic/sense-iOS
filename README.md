@@ -104,7 +104,12 @@ mv ./resources/model_conversion/model.tflite ../sense-iOS/sense-iOS/model.tflite
 ```
 
 #### Step 3: Build the project
-
+Before Building the project, you need to install the tensorflow lite pods.
+you can do so by running:
+```shell
+# If you are in sense-iOS root directory:
+pod install
+```
 You can now open the iOS project with Xcode and build it to your device. Have fun!
 
 ---
