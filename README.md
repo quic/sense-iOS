@@ -89,7 +89,7 @@ The iOS demo requires a CoreML version of our model checkpoint which you can pro
  `sense` which, for our pre-trained gesture control model, can be run using:
 
 ```shell
-python scripts/conversion/convert_to_coreml.py --backbone=efficientnet --classifier=efficient_net_gesture_control --output_name=sensenet
+python tools/conversion/convert_to_coreml.py --backbone=efficientnet --classifier=efficient_net_gesture_control --output_name=sensenet
 ```
 
 You should now have the following CoreML file: `sense/resources/coreml/sensenet.mlmodel`.
