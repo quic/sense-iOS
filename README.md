@@ -85,7 +85,7 @@ This section will explain how you can deploy our pre-trained models, or your own
 
 #### Step 1: Converting a Pytorch model to Tensorflow-Lite
 
-The iOS demo requires a CoreML version of our model checkpoint which you can produce using the script provided in
+The iOS demo requires a Tensorflow Lite version of our model checkpoint which you can produce using the script provided in
  `sense` which, for our pre-trained gesture control model, can be run using:
 
 ```shell
