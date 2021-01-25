@@ -80,7 +80,7 @@ You will need to download our pre-trained models to build the demo application. 
 #### Step 4: Install the pods
 
 This project relies on Pods to install Tensorflow Lite.
-If you don't have cocoapods install on your mac, you can install it using brew:
+If you don't have `cocoapods` installed on your mac, you can install it using brew:
 ```shell
 brew install cocoapods
 ```
