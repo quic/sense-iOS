@@ -1,6 +1,6 @@
-import Foundation
 import Accelerate
 import AVFoundation
+import Foundation
 import TensorFlowLite
 
 class InferenceLocal {
@@ -24,7 +24,6 @@ class InferenceLocal {
 	var numFrames = -2
 	var frames = [Data?]()
 	var framesForPrediction = [Data?]()
-	var cache_initialized = false
 	var cachedOutputs0: [Data] = [Data]()
 	var cachedOutputs1: [Data] = [Data]()
 	var numFramePrediction = 4
