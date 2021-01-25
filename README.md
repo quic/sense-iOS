@@ -98,14 +98,14 @@ This section will explain how you can deploy our pre-trained models, or your own
 
 #### Step 1: Converting a Pytorch model to Tensorflow-Lite
 
-The iOS demo requires a CoreML version of our model checkpoint which you can produce using the script provided in
+The iOS demo requires a Tensorflow Lite version of our model checkpoint which you can produce using the script provided in
  `sense` which, for our pre-trained gesture control model, can be run using:
 
 ```shell
 python tools/conversion/convert_to_tflite.py --backbone=efficientnet --classifier=efficient_net_gesture_control --output_name=model
 ```
 
-You should now have the following CoreML file: `sense/resources/model_conversion/model.tflite`.
+You should now have the following Tensorflow Lite file: `sense/resources/model_conversion/model.tflite`.
 
 #### Step 2: Move the converted model to the correct location
 
