@@ -8,7 +8,7 @@ import MediaPlayer
 
 protocol GUIControllerDelegate {
     func getOrientation() -> UIDeviceOrientation
-    func emitPredictions(_ output: [[Float]], _ global_output: MLMultiArray)
+    func emitPredictions(global_output: [Float32])
 }
 
 // Interface for ViewController
@@ -107,28 +107,23 @@ final class InferenceModel: InferenceType {
     
     // MARK: GUIControllerDelegate Methods
     
-    func emitPredictions(_ output: [[Float]], _ global_output: MLMultiArray) {
-        let ptr = global_output.dataPointer
-        let mem = ptr.bindMemory(to: Float32.self, capacity: InferenceLocal.dimGlobalClassifier)
-        let global_out: Array? = Array(UnsafeBufferPointer(start: mem, count: InferenceLocal.dimGlobalClassifier))
-        if let outputs = global_out {
-            let time = CACurrentMediaTime()
-            let elapsed = time - lastPredictionTime
-            lastPredictionTime = time
+    func emitPredictions(global_output: [Float32]) {
+        let time = CACurrentMediaTime()
+		let elapsed = time - lastPredictionTime
+		lastPredictionTime = time
 
-            let softmax = self.softmax(logits: outputs)
-            let maxIndice = softmax.argmax()
-            if let maxPosition = maxIndice {
-                let maxScore = softmax[maxPosition]
-                var label = ""
-                var score = ""
-                if maxScore > 0.6 {
-                    label = "\(int2lab[maxPosition]!)"
-                    score = "\(Double(round(100*maxScore)))%"
-                }
-                delegate?.showPrediction(label: label, score: score)
-            }
-        }
+		let softmax = self.softmax(logits: global_output)
+		let maxIndice = softmax.argmax()
+		if let maxPosition = maxIndice {
+			let maxScore = softmax[maxPosition]
+			var label = ""
+			var score = ""
+			if maxScore > 0.6 {
+				label = "\(int2lab[maxPosition]!)"
+				score = "\(Double(round(100*maxScore)))%"
+			}
+			delegate?.showPrediction(label: label, score: score)
+		}
     }
     
     func softmax(logits: [Float32]) -> [Float32] {

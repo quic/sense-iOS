@@ -77,34 +77,46 @@ Next, follow the instructions for [sense](https://github.com/TwentyBN/sense) to 
 You will need to download our pre-trained models to build the demo application. Once again, please follow the
  instructions in [sense](https://github.com/TwentyBN/sense) to access them (you will have to create an account and agree to our terms and conditions).
 
+#### Step 4: Install the pods
+
+This project relies on Pods to install Tensorflow Lite.
+If you don't have `cocoapods` installed on your mac, you can install it using brew:
+```shell
+brew install cocoapods
+```
+You then need to install the pods by running the following command line:
+```shell
+# If you are in sense-iOS root directory:
+pod install
+```
+
 --- 
 
 ## Getting Started
 
 This section will explain how you can deploy our pre-trained models, or your own custom model, to an iOS application. 
 
-#### Step 1: Converting a Pytorch model to CoreML
+#### Step 1: Converting a Pytorch model to Tensorflow Lite
 
-The iOS demo requires a CoreML version of our model checkpoint which you can produce using the script provided in
+The iOS demo requires a Tensorflow Lite version of our model checkpoint which you can produce using the script provided in
  `sense` which, for our pre-trained gesture control model, can be run using:
 
 ```shell
-python scripts/conversion/convert_to_coreml.py --backbone=efficientnet --classifier=efficient_net_gesture_control --output_name=sensenet
+python tools/conversion/convert_to_tflite.py --backbone=efficientnet --classifier=efficient_net_gesture_control --output_name=model
 ```
 
-You should now have the following CoreML file: `sense/resources/coreml/sensenet.mlmodel`.
+You should now have the following Tensorflow Lite file: `sense/resources/model_conversion/model.tflite`.
 
 #### Step 2: Move the converted model to the correct location
 
-The CoreML file created in the last step can be moved from `sense` to `sense-iOS` in the following location: `sense-iOS/sense-iOS/sensenet.mlmodel`
+The Tensorflow Lite file created in the last step can be moved from `sense` to `sense-iOS` in the following location: `sense-iOS/sense-iOS/model.tflite`
 
 ```shell
 # If you are in sense
-mv ./resources/coreml/sensenet.mlmodel ../sense-iOS/sense-iOS/sensenet.mlmodel
+mv ./resources/model_conversion/model.tflite ../sense-iOS/sense-iOS/model.tflite
 ```
 
 #### Step 3: Build the project
-
 You can now open the iOS project with Xcode and build it to your device. Have fun!
 
 ---
@@ -113,9 +125,6 @@ You can now open the iOS project with Xcode and build it to your device. Have fu
 
 Using our transfer learning script, it is possible to further fine-tune our model to your own classification tasks. If
  you do so, you'll have to reflect the new outputs in various files in the iOS project: 
-
-#### `sense-iOS/InferenceLocal.swift` 
-The number of model outputs must be updated in dimGlobalClassifier (default: 30 - number of labels in the gesture control task).
 
 #### `sense-iOS/sensenet_labels.json` 
 
