@@ -77,6 +77,19 @@ Next, follow the instructions for [sense](https://github.com/TwentyBN/sense) to 
 You will need to download our pre-trained models to build the demo application. Once again, please follow the
  instructions in [sense](https://github.com/TwentyBN/sense) to access them (you will have to create an account and agree to our terms and conditions).
 
+#### Step 4: Install the pods
+
+This project relies on Pods to install Tensorflow Lite.
+If you don't have cocoapods install on your mac, you can install it using brew:
+```shell
+brew install cocoapods
+```
+You then need to install the pods by running the following command line:
+```shell
+# If you are in sense-iOS root directory:
+pod install
+```
+
 --- 
 
 ## Getting Started
@@ -104,12 +117,6 @@ mv ./resources/model_conversion/model.tflite ../sense-iOS/sense-iOS/model.tflite
 ```
 
 #### Step 3: Build the project
-Before Building the project, you need to install the tensorflow lite pods.
-you can do so by running:
-```shell
-# If you are in sense-iOS root directory:
-pod install
-```
 You can now open the iOS project with Xcode and build it to your device. Have fun!
 
 ---
