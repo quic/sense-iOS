@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/imgs/sense-iOS_logo.png" height="110px">
+<img src="docs/imgs/sense_iOS_logo.svg" height="110px">
 
 **State-of-the-art Real-time Action Recognition for iOS**
 
